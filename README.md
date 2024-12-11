@@ -1,27 +1,87 @@
-# AngularPsnStore
+### Angular PSN Store
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.10.
+O **Angular PSN Store** é um projeto desenvolvido durante um curso da **Digital Innovation One (DIO)**, com o objetivo de aprender e aplicar conceitos fundamentais do **Angular**. Após concluir as aulas, o projeto foi refeito e aprimorado com a adição do framework de estilização **Tailwind CSS**, proporcionando um design moderno e responsivo.
 
-## Development server
+---
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+### 🛠️ **Tecnologias Utilizadas**
 
-## Code scaffolding
+- **Angular**: Framework para desenvolvimento de aplicações web.
+- **Tailwind CSS**: Framework de estilização baseado em utilitários para criação de interfaces elegantes.
+- **Docker Compose**: Configuração para execução da aplicação em um ambiente containerizado.
+- **Apache HTTP Server**: Servidor web leve usado para hospedar os arquivos do projeto.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+---
 
-## Build
+### 🌟 **Destaques do Projeto**
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- Construção de uma interface responsiva e estilizada com **Tailwind CSS**.
+- Organização e modularização do código seguindo boas práticas do Angular.
+- Configuração de ambiente com **Docker Compose**, facilitando o deploy local.
 
-## Running unit tests
+---
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### 🚀 **Como Executar**
 
-## Running end-to-end tests
+1. **Clone o Repositório**
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+   ```bash
+   git clone https://github.com/Sousa-Edson/angular-psn-store.git
+   cd angular-psn-store
+   ```
 
-## Further help
+2. **Gere o Build da Aplicação**
+   Certifique-se de que o Angular CLI está instalado e execute:
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+   ```bash
+   ng build --configuration production
+   ```
+
+3. **Inicie a Aplicação com Docker Compose**
+   Use o comando abaixo para rodar a aplicação em um contêiner:
+
+   ```bash
+   docker-compose up --build
+   ```
+
+4. **Acesse no Navegador**
+   Acesse a aplicação em [http://localhost:8083](http://localhost:8083).
+
+---
+
+### 🗂️ **Estrutura do Projeto**
+
+- **`src/`**: Código-fonte da aplicação Angular.
+- **`dist/`**: Arquivos gerados pelo build da aplicação.
+- **`docker-compose.yml`**: Configuração para execução com Docker Compose.
+- **`tailwind.config.js`**: Configuração personalizada do Tailwind CSS.
+
+---
+
+### 📘 **Aprendizados**
+
+- Integração de **Angular** com **Tailwind CSS** para criar interfaces modernas.
+- Uso do **Docker Compose** para gerenciar contêineres e simplificar o desenvolvimento local.
+- Melhoria da organização do projeto, seguindo boas práticas ensinadas no curso da **DIO**.
+
+---
+
+## Comandos para build e deploy
+
+### Comandos para build
+
+```bash
+ng build
+```
+
+### Comandos para instalar cli de github pages
+
+```bash
+npm install -g angular-cli-ghpages
+```
+
+### Comandos para deploy
+
+```bash
+ng deploy --base-href="/angular-psn-store/"
+```

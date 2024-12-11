@@ -1,1 +1,7 @@
-<p>home works!</p>
+<div class="w-[80%] mx-auto pt-12 flex justify-around items-baseline flex-wrap">
+    @for(item of games;track item.gameLabel ){
+    <app-card [gameCover]='item.gameCover' [gameLabel]='item.gameLabel' [gameType]='item.gameType'
+        [gamePrice]='item.gamePrice'>
+    </app-card>
+    }
+</div>

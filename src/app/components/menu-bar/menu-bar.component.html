@@ -1,0 +1,11 @@
+<div class="fixed z-[999] bg-white w-full h-10 shadow-md flex items-center">
+
+    <app-menu-logo />
+    <div class="flex items-center mx-auto">
+        <ul class="flex list-none">
+            @for(  item of dados; track item.nome){
+            <app-menu-item [link]="item.link" [nome]="item.nome" />
+            }
+        </ul>
+    </div>
+</div>

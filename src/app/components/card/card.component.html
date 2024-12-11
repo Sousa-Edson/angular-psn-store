@@ -1,1 +1,13 @@
-<p>card works!</p>
+<div class="relative border-4 border-gray-700 rounded-lg w-[350px] h-[500px] flex overflow-hidden mt-2 cursor-pointer"
+    (click)="openModal(gameType,gameCover,gameLabel,gamePrice)">
+    <img class="w-full h-full transition-transform duration-800 hover:scale-110" [src]="gameCover" alt="" srcset="">
+    @if(gameLabel){
+    <app-card-label [gameLabel]="gameLabel" />
+    }
+    <app-card-pricing [gameType]="gameType" [gamePrice]="gamePrice">
+    </app-card-pricing>
+</div>
+
+<app-modal-game [isVisible]="isModalVisible" [gameType]="modalGameType" [gameCover]="modalGameCover"
+    [gameLabel]="modalGameLabel" [gamePrice]="modalGamePrice">
+</app-modal-game>

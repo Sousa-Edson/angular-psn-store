@@ -1,0 +1,15 @@
+<div class="fixed inset-0 bg-gray-800 bg-opacity-90 flex justify-center items-center z-50" *ngIf="isVisible">
+  <div class=" p-5 rounded-lg w-11/12 md:w-1/3">
+    <h2 class="text-xl font-bold mb-1">Detalhes do Jogo</h2>
+    <div class="relative  d  rounded-lg  flex overflow-hidden mt-2 cursor-pointer">
+      <img class="w-full h-full  " [src]="gameCover" alt="" srcset="">
+      @if(gameLabel){
+      <app-card-label [gameLabel]="gameLabel" />
+      }
+      <app-card-pricing [gameType]="gameType" [gamePrice]="gamePrice">
+      </app-card-pricing>
+    </div>
+
+    <app-button-close (click)="closeModal()" />
+  </div>
+</div>
